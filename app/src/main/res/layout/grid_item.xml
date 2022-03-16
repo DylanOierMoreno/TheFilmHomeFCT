@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Estructura de cada ítem que se carga en RECYCLERVIEW tipo GRID-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <!--1. Imagen de la película-->
+    <ImageView
+        android:id="@+id/idImagen"
+        android:layout_width="205dp"
+        android:layout_height="285dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop" />
+
+</LinearLayout>
+

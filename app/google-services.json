@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "784325057639",
+    "project_id": "thefilmhome-frbse",
+    "storage_bucket": "thefilmhome-frbse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784325057639:android:eac5483120dc9c2bed08c2",
+        "android_client_info": {
+          "package_name": "es.barajas.thefilmhomefct"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784325057639-5fdc7lnpclgqprtdll4ck0mj2k6bimsr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_b7jYucbXtxEvwZJm8pfqmkGJfDql3vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784325057639-5fdc7lnpclgqprtdll4ck0mj2k6bimsr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

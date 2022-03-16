@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        tools:context=".ui.iniciar_sesion.Registro">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.NavegationDrawer.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_iniciarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@android:color/holo_red_dark"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title=""
+                app:popupTheme="@style/Theme.NavegationDrawer.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_edit_note"
+                        android:layout_marginTop="5dp"
+                        app:tint="@color/white"
+                        android:contentDescription="@string/txt_titulo_registro" />
+
+                    <TextView
+                        android:id="@+id/txt_tituloPeliculas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="@string/txt_titulo_registro" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <EditText
+            android:id="@+id/et_userNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/userNombre"
+            android:autofillHints=""
+            android:inputType="textPersonName"
+            android:layout_marginHorizontal="15dp" />
+
+        <!--El inputType es de tipo text para poder poner caracteres especiales como el guión en el
+        caso de un apellido compuesto -->
+        <EditText
+            android:id="@+id/et_userApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/userApellidos"
+            android:autofillHints=""
+            android:inputType="text"
+            android:layout_marginHorizontal="15dp" />
+
+        <EditText
+            android:id="@+id/et_userFechaNac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="@string/userFechaNac"
+            android:fontFamily="@font/roboto"
+            android:autofillHints=""
+            android:inputType="date"
+            android:focusable="false"
+            android:maxLines="1"
+            android:layout_marginHorizontal="15dp" />
+
+        <EditText
+            android:id="@+id/et_userMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/userMail"
+            android:autofillHints=""
+            android:inputType="textEmailAddress"
+            android:layout_marginHorizontal="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_userPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/userPassword"
+                android:autofillHints=""
+                android:inputType="textPassword" />
+
+            <ImageButton
+                android:id="@+id/btn_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_visibility"
+                android:contentDescription="@string/userPassword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_userPassword2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/userPassword2"
+                android:autofillHints=""
+                android:inputType="textPassword" />
+
+            <ImageButton
+                android:id="@+id/btn_password2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_visibility"
+                android:contentDescription="@string/userPassword2" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg_userGenero"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_Masculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/roboto"
+                android:textSize="18sp"
+                android:text="@string/genero_masculino" />
+
+            <RadioButton
+                android:id="@+id/rb_Femenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/roboto"
+                android:textSize="18sp"
+                android:text="@string/genero_femenino" />
+
+            <RadioButton
+                android:id="@+id/rb_NoBinario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:textSize="18sp"
+                android:text="@string/genero_no_binario" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/tipo_de_documento"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner_tiposDocumentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="15dp"
+                android:background="#D3D3D3"
+                android:fontFamily="@font/roboto"
+                android:entries="@array/documentos" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/userNumeroDoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/userNumeroDoc"
+            android:autofillHints=""
+            android:inputType="text"
+            android:layout_marginHorizontal="15dp" />
+
+        <!--<Button
+            android:id="@+id/btn_privacidadRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#ACABAB"
+            android:text="@string/pol_tica_de_privacidad"/>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="0dp" >
+
+            <CheckBox
+                android:id="@+id/chkAceptarCondiciones"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="-5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="19dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/txtCondiciones"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_privacidadRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/pol_tica_de_privacidad"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGuardarDatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#5C5C5C"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/btnGuardarDatos"
+            android:textStyle="bold"
+            android:enabled="true" />
+
+    </LinearLayout>
+
+</ScrollView>

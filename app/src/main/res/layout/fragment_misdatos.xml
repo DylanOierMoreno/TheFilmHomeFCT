@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--LinearLayout Principal-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.iniciar_sesion.Registro">
+
+        <!--Layout que guarda el TITULO 1 (Tu cuenta + subrayado + icono guardar)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txv_tuCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/tu_cuenta"
+                    android:textColor="@android:color/holo_red_dark" />
+                <!--Vista para SUBRAYAR-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/holo_red_dark" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ib_guardarCuenta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/btnGuardarDatos"
+                android:src="@drawable/ic_save"
+                app:tint="@android:color/holo_red_dark" />
+
+        </LinearLayout>
+
+        <!--LinearLayout NOMBRE-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_userNombreConsulta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="7"
+                android:autofillHints=""
+                android:enabled="false"
+                android:hint="@string/userNombre"
+                android:inputType="textPersonName" />
+
+            <ImageButton
+                android:id="@+id/ib_editarNombre"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/userNombre"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <!--LinearLayout APELLIDOS-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <!--El inputType es de tipo text para poder poner caracteres especiales como el guión en el
+            caso de un apellido compuesto -->
+            <EditText
+                android:id="@+id/et_userApellidosConsulta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="7"
+                android:autofillHints=""
+                android:enabled="false"
+                android:hint="@string/userApellidos"
+                android:inputType="text" />
+
+            <ImageButton
+                android:id="@+id/ib_editarApellidos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/userApellidos"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <!--LinearLayout FECHA NACIMIENTO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <!--El inputType es de tipo text para poder poner caracteres especiales como el guión en el
+            caso de un apellido compuesto -->
+            <EditText
+                android:id="@+id/et_userFechaNacConsulta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="7"
+                android:autofillHints=""
+                android:enabled="false"
+                android:focusable="false"
+                android:hint="@string/userFechaNac"
+                android:inputType="date"
+                android:maxLines="1" />
+
+            <ImageButton
+                android:id="@+id/ib_editarFechaNac"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/userFechaNac"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <!--LinearLayout EMAIL-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <!--El inputType es de tipo text para poder poner caracteres especiales como el guión en el
+            caso de un apellido compuesto -->
+            <EditText
+                android:id="@+id/et_userMailConsulta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_weight="7"
+                android:autofillHints=""
+                android:enabled="false"
+                android:hint="@string/userMail"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <!--LinearLayout CONTRASEÑA-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <!--El inputType es de tipo text para poder poner caracteres especiales como el guión en el
+            caso de un apellido compuesto -->
+            <EditText
+                android:id="@+id/et_userPasswordConsulta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="7"
+                android:autofillHints=""
+                android:enabled="false"
+                android:hint="@string/userPassword"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <!--Layout que guarda el TITULO 2 (Datos Personales + subrayado + icono guardar)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txv_datosPersonales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/datos_personales"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <!--Vista para SUBRAYAR-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/holo_red_dark" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ib_guardarDatosPersonales"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/datos_personales"
+                android:src="@drawable/ic_save"
+                app:tint="@android:color/holo_red_dark" />
+
+        </LinearLayout>
+
+        <!--LinearLayout GENERO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txv_genero"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="7"
+                android:fontFamily="@font/roboto"
+                android:text="@string/Género"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/ib_editarGenero"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/userGenero"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <!--VISIBILITY:GONE oculta el Elemento y NO ocupa espacio en el layout
+            VISIBILITY:INVISIBLE oculta el Elemento pero SI ocupa espacio en el layout-->
+        <RadioGroup
+            android:id="@+id/rg_userGeneroConsulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_MasculinoConsulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:enabled="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/masculino"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_FemeninoConsulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:enabled="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/femenino"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_NoBinarioConsulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/no_binario"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <!--LinearLayout TIPODOCUMENTO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tipoDocConsulta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="4"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/tipo_de_documento"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_numeroDocConsulta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="4"
+                android:fontFamily="@font/roboto"
+                android:text="@string/numero_de_documento"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!--Vista para SUBRAYAR-->
+        <EditText
+            android:id="@+id/et_userNumeroDocConsulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            android:hint="@string/userNumeroDoc"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <!--Layout que guarda el TITULO 3 (Preferencia de cine + subrayado + icono guardar)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txv_preferenciaCine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/preferencia_de_cine"
+                    android:textColor="@android:color/holo_red_dark"
+                    tools:ignore="NestedWeights" />
+
+                <!--Vista para SUBRAYAR-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/holo_red_dark" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ib_guardarPrefCine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/preferencia_de_cine"
+                android:src="@drawable/ic_save"
+                app:tint="@android:color/holo_red_dark" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/txtProvincia"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!--LinearLayout Provincia-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_provincias"
+                style="?attr/listPreferredItemHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="7"
+                android:fontFamily="@font/roboto" />
+
+            <ImageButton
+                android:id="@+id/ib_provincia"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/txtProvincia"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/txtCine"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!--LinearLayout Provincia-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_cine"
+                style="?attr/listPreferredItemHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="7"
+                android:fontFamily="@font/roboto" />
+
+            <ImageButton
+                android:id="@+id/ib_cine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/txtCine"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/cerrar_sesion" />
+
+    </LinearLayout>
+
+</ScrollView>

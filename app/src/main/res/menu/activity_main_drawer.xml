@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--5. MENU-->
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_peliculas"
+            android:icon="@drawable/ic_local_movies"
+            android:title="@string/menu_peliculas" />
+        <item
+            android:id="@+id/nav_promociones"
+            android:icon="@drawable/ic_local_offer"
+            android:title="@string/menu_promociones" />
+        <item
+            android:id="@+id/nav_ubicacion"
+            android:icon="@drawable/ic_place"
+            android:title="@string/menu_ubicacion" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_cerrarAp"
+            android:icon="@drawable/ic_exit_to_app"
+            android:title="@string/menu_cerrarAp" />
+    </group>
+</menu>

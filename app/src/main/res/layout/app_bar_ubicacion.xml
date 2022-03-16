@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este LAYOUT es el que se incluye en activity_sesion_iniciada.xml
+    para ligarlo de fondo al menú que se pliega y despliega-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ubicacion">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.NavegationDrawer.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@android:color/holo_red_dark"
+            app:navigationIcon="@drawable/ic_menu"
+            app:title=""
+            app:popupTheme="@style/Theme.NavegationDrawer.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_place"
+                    android:layout_marginTop="5dp"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/txt_titulo_ubicacion" />
+
+                <TextView
+                    android:id="@+id/txt_tituloPeliculas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="@string/txt_titulo_ubicacion" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:background="@color/black"
+        android:paddingStart="55dp"
+        android:paddingTop="25dp"
+        android:paddingEnd="55dp"
+        android:paddingBottom="25dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/txtUbicacion"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="160dp"
+        android:text="@string/txtComunidadAutonoma"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <Spinner
+        android:id="@+id/spinner_comunidadesAutonomas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="180dp"
+        android:entries="@array/comunidades_autonomas"
+        android:prompt="@string/txtSeleccionarItem"
+        style="?attr/listPreferredItemHeight" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="170dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/txtProvincia"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <Spinner
+        android:id="@+id/spinner_provincias"
+        style="?attr/listPreferredItemHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="190dp"
+        android:fontFamily="@font/roboto" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/txtCine"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <Spinner
+        android:id="@+id/spinner_cine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="270dp"
+        style="?attr/listPreferredItemHeight"
+        android:fontFamily="@font/roboto" />
+
+    <Button
+        android:id="@+id/btnGuardarUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="400dp"
+        android:backgroundTint="#D5D4D4"
+        android:enabled="false"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/btnGuardarUbicacion"
+        android:textStyle="bold" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

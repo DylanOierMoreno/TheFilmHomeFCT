@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp">
+    <!--la etiqueta tools:text es para probar el formato pero
+    no es el texto que aparecerá cuando se ejecute la app, El texto se rellena
+    leyendo de la BBDD Firebase en RV_AdaptadorHorarios!-->
+    <TextView
+        android:id="@+id/txt_nombreCine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Plenilunio" />
+
+    <TextView
+        android:id="@+id/txt_direccionCine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textSize="16sp"
+        android:textColor="#5C5C5C"
+        tools:text="Aracne, s / n, 28022 Madrid" />
+
+    <!--Layout que contiene los botones con las sesiones
+    Los botones los creamos DINÁMICAMENTE en RV_AdaptadorHorarios.kt-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layoutHorariosBotones"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp" />
+
+    </HorizontalScrollView>
+
+</LinearLayout>

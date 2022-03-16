@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este LAYOUT es el que se incluye en activity_sesion_iniciada.xml
+    para ligarlo de fondo al menú que se pliega y despliega-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Peliculas">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.NavegationDrawer.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_peliculas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@android:color/holo_red_dark"
+            app:navigationIcon="@drawable/ic_menu"
+            app:title=""
+            app:popupTheme="@style/Theme.NavegationDrawer.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_local_movies"
+                    android:layout_marginTop="5dp"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/txtPeliculas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="@string/txtPeliculas" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--2.  TABLAYOUT cuyas pestañas se añaden en PeliculasFragment.kt para que solo se vea en el FRAGMENT PELÍCULAS-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutPeliculas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        app:tabIndicatorColor="@android:color/holo_red_dark"
+        app:tabSelectedTextColor="@android:color/holo_red_dark"
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabMode="fixed"
+        app:tabGravity="fill" />
+
+    <!--1. VIEWPAGER2-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager_peliculas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="107dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

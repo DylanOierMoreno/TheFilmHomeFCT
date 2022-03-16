@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/UselessPartent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.NavegationDrawer.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_elegirEntradas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@android:color/holo_red_dark"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title=""
+                app:popupTheme="@style/Theme.NavegationDrawer.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_local_play"
+                        android:layout_marginTop="5dp"
+                        app:tint="@color/white"
+                        android:contentDescription="@string/txt_titulo_elegir_entradas" />
+
+                    <TextView
+                        android:id="@+id/txt_tituloPeliculas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="@string/txt_titulo_elegir_entradas" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:background="@android:color/holo_red_dark"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/numMaxEntradas"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/txtPrecio"
+                android:gravity="end" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/txtCantidad"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/entrada_adulto"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_precioAdulto"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/precio_adulto"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_marginTop="2dp" />
+
+                <EditText
+                    android:id="@+id/et_entradaAdulto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="80dp"
+                    android:gravity="end"
+                    android:enabled="false"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    android:text="@string/numEntradas_adulto"
+                    android:textColor="@color/black"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <ImageButton
+                    android:id="@+id/btnAdd_adulto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="32dp"
+                    android:contentDescription="@string/add" />
+
+                <ImageButton
+                    android:id="@+id/btnRemove_adulto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/remove" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/entrada_joven"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/info_joven"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_precioJoven"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/precio_joven"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_marginTop="2dp"/>
+
+                <EditText
+                    android:id="@+id/et_entradaJoven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="80dp"
+                    android:gravity="end"
+                    android:enabled="false"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    android:text="@string/numEntradas_joven"
+                    android:textColor="@color/black"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <ImageButton
+                    android:id="@+id/btnAdd_joven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="32dp"
+                    android:contentDescription="@string/add" />
+
+                <ImageButton
+                    android:id="@+id/btnRemove_joven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/remove" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/entrada_nino"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/info_nino"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_precioNino"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/precio_nino"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_marginTop="2dp"/>
+
+                <EditText
+                    android:id="@+id/et_entradaNino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="80dp"
+                    android:gravity="end"
+                    android:enabled="false"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    android:text="@string/numEntradas_nino"
+                    android:textColor="@color/black"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <ImageButton
+                    android:id="@+id/btnAdd_nino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="32dp"
+                    android:contentDescription="@string/add" />
+
+                <ImageButton
+                    android:id="@+id/btnRemove_nino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/remove" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/entrada_senior"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/info_senior"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_precioSenior"
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/precio_senior"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_marginTop="2dp" />
+
+                <EditText
+                    android:id="@+id/et_entradaSenior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="80dp"
+                    android:gravity="end"
+                    android:enabled="false"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    android:text="@string/numEntradas_senior"
+                    android:textColor="@color/black"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <ImageButton
+                    android:id="@+id/btnAdd_senior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="32dp"
+                    android:contentDescription="@string/add" />
+
+                <ImageButton
+                    android:id="@+id/btnRemove_senior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove_circle_black"
+                    android:background="@color/white"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/remove" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="@string/txtInformacionEntradas"
+                android:paddingTop="5dp" />
+
+            <ImageButton
+                android:id="@+id/info_canjear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/ic_help"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/help"
+                app:tint="#000000" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_numTarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="16sp"
+            android:hint="@string/descuento"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/txtTotal" />
+
+            <TextView
+                android:id="@+id/tv_precioEntradas"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/precioTotalEntradas"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_siguiente_elegirEntradas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#5C5C5C"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:drawableTint="@color/white"
+            android:enabled="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/btnSiguiente"
+            android:textStyle="bold"
+            tools:targetApi="m" />
+
+    </LinearLayout>
+
+</ScrollView>

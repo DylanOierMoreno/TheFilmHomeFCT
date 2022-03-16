@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_ubicacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <!--LAYOUT que se ve al recoger el menú-->
+    <include
+        layout="@layout/app_bar_ubicacion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--NAVIGATION DRAWER con el id y el menu, header-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_ubicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/activity_main_drawer"
+        app:headerLayout="@layout/nav_header_main"
+        android:layout_gravity="start"
+        app:itemBackground="@drawable/background_selected_item"
+        app:itemIconTint="@color/text_icon_selected_item"
+        app:itemTextColor="@color/text_icon_selected_item"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/txtSinopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="@string/sinopsis"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14.5sp" />
+
+        <TextView
+            android:id="@+id/txtSinopsisContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/argumento_de_la_pelicula"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            tools:targetApi="o"
+            android:justificationMode="inter_word" />
+        <!--justificationMode="inter_word" es una propiedad para poder justificar el texto-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:id="@+id/txtDirector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:textSize="14.5sp"
+                android:text="@string/director" />
+
+            <TextView
+                android:id="@+id/txtDirectorContenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/roboto"
+                android:text="@string/nombre_del_director"
+                android:textAlignment="textEnd"
+                android:textSize="17sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:id="@+id/txtReparto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:textSize="14.5sp"
+                android:text="@string/reparto" />
+
+            <TextView
+                android:id="@+id/txtRepartoContenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/nombres_del_reparto"
+                android:textSize="17sp"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:id="@+id/txtPais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:textSize="14.5sp"
+                android:text="@string/pais" />
+
+            <TextView
+                android:id="@+id/txtPaisContenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/pais_de_origen"
+                android:textAlignment="textEnd"
+                android:textSize="17sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:id="@+id/txtEstreno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:textSize="14.5sp"
+                android:text="@string/estreno" />
+
+            <TextView
+                android:id="@+id/txtEstrenoContenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/estreno"
+                android:textAlignment="textEnd"
+                android:textSize="17sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

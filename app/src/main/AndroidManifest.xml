@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="es.barajas.thefilmhomefct">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Permiso para acceder al EXPLORADOR DE ARCHIVOS del móvil -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.PERMISSION_GRANTED" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheFilmHome">
+        <activity
+            android:name=".ui.iniciar_sesion.Login"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".ui.peliculas.LoginCompra"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".ui.peliculas.DatosPagoBizum"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".ui.peliculas.DatosPagoTarjeta"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".ui.peliculas.PagarEntradas"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".ui.peliculas.SeleccionarButacas"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".ui.iniciar_sesion.Registro"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".Peliculas"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".Promociones"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".Ubicacion"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".SesionIniciada"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".IniciarSesion"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".ui.peliculas.ElegirEntradas"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" /> <!-- KEYBOARDHIDDEN Y PORTRAIT Para poder girar la pantalla y ver el vídeo en pantalla COMPLETA -->
+        <activity
+            android:name=".ui.peliculas.DetallePelicula"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.TheFilmHome.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
